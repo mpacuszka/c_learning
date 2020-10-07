@@ -18,7 +18,7 @@ int main()
             max = len;
             copy(longest, line);
         }
-        if (max)
+        if (len > 80)
             printf("length: %d, line: %s", max, longest);
     }
     return 0;
@@ -36,8 +36,6 @@ int getline(char s[], int lim)
         i++;
     }
     s[i] = '\0';
-
-
 
     return i;
 }

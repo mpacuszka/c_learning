@@ -37,15 +37,24 @@ int getline(char s[], int lim)
     }
     s[i] = '\0';
 
-
-
     return i;
 }
 
 void copy(char to[], char from[])
 {
-    int i = 0;
+    int k = 0;
+    int j = 0;
 
-    while ((to[i] = from[i]) != '\0')
-        ++i;
+    while (from[k] != '\0')
+    {
+        int a = from[k];
+        if (from[k] == '\n' || from[k] == ' ' || from[k] == '\t')
+        {
+            ++k;
+            continue;
+        }
+        to[j] = from[k];
+        ++j;
+        ++k;
+    }
 }
