@@ -13,8 +13,8 @@ int main()
 
     while (getline(line, MAXLINE) > 0)
     {
-            detab(detabbed, line, SPACES);
-            printf("line: %s\ndetabbed: %s\n", line, detabbed);
+        detab(detabbed, line, SPACES);
+        printf("line: %s\ndetabbed: %s\n", line, detabbed);
     }
     return 0;
 }
